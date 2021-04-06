@@ -8,13 +8,15 @@
     </swiper-item>
   </swiper>
   <view class="line">
-    <!-- <view class="box" bindtap="biaobai">
-      <image src="../../images/biaobai.png"></image>
-      <view>表白墙</view>
-    </view> -->
     <view class="box" bindtap="lost">
       <image src="../../images/lost.png"></image>
       <view>失物招领</view>
+    </view>
+  </view>
+  <view class="line">
+    <view class="box" bindtap="lost">
+      <image src="../../images/lost.png"></image>
+      <view>寻物启事</view>
     </view>
   </view>
 </view>

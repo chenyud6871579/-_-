@@ -25,31 +25,31 @@ swiper-item{
 .line{
   margin: auto;
   width: 95vw;
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
   flex-direction: row;
 }
 .box{
   display: flex;
   flex-direction: row;
-  background-color: #82b3fc;
+  background-color: #81d8cf;
   border-radius: 15rpx;
-  margin-top: 20rpx;
-  width: 46vw;
+  margin-top: 100rpx;
+  width: 75vw;
   height: 20vw;
-  justify-content: left;
+  justify-content: center;
   font-size: 35rpx;
   /* box-shadow: 10rpx 10rpx 10rpx rgba(0, 0, 0, 0.2); */
 }
 .box:active{
   display: flex;
   flex-direction: row;
-  background-color: #418dff;
+  background-color: #01847f;
   border-radius: 15rpx;
-  margin-top: 20rpx;
-  width: 46vw;
+  margin-top: 100rpx;
+  width: 75vw;
   height: 20vw;
-  justify-content: left;
+  justify-content: center;
   font-size: 35rpx;
   /* box-shadow: 10rpx 10rpx 10rpx rgba(0, 255, 186, 0.5); */
 }
