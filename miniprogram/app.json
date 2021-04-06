@@ -1,9 +1,12 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/create/create",
     "pages/temp/temp",
     "pages/mine/mine",
     "pages/mine/about/about",
+    "pages/create/lost_create/lost_create",
+    "pages/create/find_create/find_create",
     "pages/lost/lost",
     "pages/send/send"
   ],
@@ -18,6 +21,12 @@
         "text": "首页",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "发布",
+        "iconPath": "images/broad_un.png",
+        "selectedIconPath": "images/broad_active.png"
       },
       {
         "pagePath": "pages/mine/mine",

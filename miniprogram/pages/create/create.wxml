@@ -1,0 +1,19 @@
+<!--pages/create/create.wxml-->
+<view class="container">
+
+<image 
+  src="{{img_src1}}"
+  style='{{style}}'
+  class='item1'
+  bindtap='find_create'
+></image>
+
+
+<image 
+  src="{{img_src2}}"
+  style='{{style}}'
+  class='item2'
+  bindtap='lost_create'
+></image>
+
+</view>
