@@ -38,7 +38,7 @@
     "minifyWXSS": true
   },
   "appid": "wx70ecaaaafe06e6e2",
-  "projectname": "%E6%8B%BE%E7%89%A9%E5%A2%99",
+  "projectname": "lost and found",
   "libVersion": "2.14.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
