@@ -5,12 +5,12 @@
       <view class="box_top">看我捡到了个啥(′▽`〃)</view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left">物品名称:</view>
+        <view class="left">物品名称</view>
         <input placeholder="请输入物品名称" bindinput="name"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left">物品图片:</view>
+        <view class="left">物品图片</view>
         <scroll-view scroll-x="true" class="images_box">
           <block wx:key="imgbox" wx:for="{{imgbox}}">
             <view class='img-box'>
@@ -27,7 +27,7 @@
       </view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left">详细说明:</view>
+        <view class="left">详细说明</view>
         <textarea placeholder="请输入捡到的过程，时间地点之类的..." bindinput="info"></textarea>
       </view>
     </view>
