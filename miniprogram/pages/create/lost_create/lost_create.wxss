@@ -1,3 +1,4 @@
+/* pages/create/find_create/find_create.wxss */
 .pages {
   width: 98%;
   margin: auto;
@@ -39,13 +40,22 @@
 }
 
 .left {
-  width: 25%;
+  width: 30%;
+}
+
+.left2 {
+  width: 23%;
 }
 
 input, textarea {
   width: 75%;
 }
 
+.box_center_special {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
 /* 图片 */
 .images_box {
   white-space: nowrap;
@@ -62,7 +72,7 @@ input, textarea {
   width: 100rpx;
   height: 100rpx;
   margin-right: 35rpx;
-  margin-top: 20rpx;
+  margin-top: 30rpx;
   margin-bottom: 20rpx;
   position: relative;
 }
