@@ -8,14 +8,14 @@
     </swiper-item>
   </swiper>
   <view class="line">
-    <view class="box" bindtap="lost">
-      <image src="../../images/lost.png"></image>
+    <view class="box" bindtap="found">
+      <!-- <image src="../../images/lost.png"></image> -->
       <view>失物招领</view>
     </view>
   </view>
   <view class="line">
     <view class="box" bindtap="lost">
-      <image src="../../images/lost.png"></image>
+      <!-- <image src="../../images/lost.png"></image> -->
       <view>寻物启事</view>
     </view>
   </view>

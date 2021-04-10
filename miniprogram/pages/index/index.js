@@ -25,7 +25,13 @@ Page({
       url: '../lost/lost',
     })
   },
-  
+
+  found: function() {
+    wx.navigateTo({
+      url: '../found/found',
+    })
+  },
+
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
