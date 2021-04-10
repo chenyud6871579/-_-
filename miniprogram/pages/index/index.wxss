@@ -16,11 +16,13 @@ swiper{
 swiper-item{
   border-radius: 20rpx;
 }
-
 .all{
   width: 95vw;
   margin: auto;
   margin-top: 3vw;
+}
+.buttons{
+  margin-top: 60rpx;
 }
 .line{
   margin: auto;
@@ -34,7 +36,7 @@ swiper-item{
   flex-direction: row;
   background-color: #81d8cf;
   border-radius: 15rpx;
-  margin-top: 100rpx;
+  margin-top: 80rpx;
   width: 75vw;
   height: 20vw;
   justify-content: center;
@@ -62,4 +64,5 @@ swiper-item{
   height: 20vw;
   line-height: 20vw;
   color: white;
+  font-size: 6vw;
 }
