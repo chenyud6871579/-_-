@@ -1,9 +1,4 @@
-/* pages/create/find_create/find_create.wxss */
-.pages {
-  width: 98%;
-  margin: auto;
-  overflow: hidden;
-}
+
 
 .all {
   width: 90vw;
@@ -51,11 +46,6 @@ input, textarea {
   width: 75%;
 }
 
-.box_center_special {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
 /* 图片 */
 .images_box {
   white-space: nowrap;
@@ -100,7 +90,7 @@ button {
   line-height: 8vh;
   border: none;
   border-radius: 0;
-  background-color: #00a8f3;
+  background-color: #f96159;
   color: white;
   position: fixed;
   bottom: 0

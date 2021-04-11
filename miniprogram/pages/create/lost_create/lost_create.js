@@ -1,4 +1,4 @@
-
+var util = require('../../util/util.js');
 Page({
 
   /**
@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '失物招领'
+      title: '你丢了啥了'
     })
     var that = this
     wx.getStorage({
