@@ -1,4 +1,4 @@
-
+var util = require('../../util/util.js');
 Page({
 
   /**
@@ -7,7 +7,7 @@ Page({
   data: {
     imgbox: [], //选择图片
     fileIDs: [], //上传云存储后的返回值
-    type:'lostfind',
+    type:'lostfound',
   },
 
   /**
@@ -15,7 +15,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '失物招领'
+      title: '你捡着啥了'
     })
     var that = this
     wx.getStorage({
@@ -114,6 +114,7 @@ Page({
     } else {
       var room = 'xianzhi'
     }
+
     console.log(room)
     if (!this.data.imgbox.length) {
       wx.showToast({
