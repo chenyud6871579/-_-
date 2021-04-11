@@ -2,7 +2,6 @@
   "pages": [
     "pages/index/index",
     "pages/create/create",
-    "pages/temp/temp",
     "pages/mine/mine",
     "pages/mine/about/about",
     "pages/create/lost_create/lost_create",
