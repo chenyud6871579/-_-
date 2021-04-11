@@ -1,6 +1,6 @@
-<view class="header">
-  <image class="bg_ware" src="https://moyv.top/wechat/images/bg_wave.gif"></image>
-  <view class="info">
+  <view class="header">
+
+   <view class="info">
     <view class="touxiang" wx:if="{{login}}">
       <open-data type="userAvatarUrl"></open-data>
     </view>
@@ -33,44 +33,54 @@
         <text>发布{{xianzhi}}</text>
       </view>
     </view> -->
-    <view class="list_shuxian"></view>
+   <!-- <view class="list_shuxian"></view>-->
     <view class="navigation_list">
       <image src="/images/lost.png" class="list_left"></image>
       <view class="list_right">
         <view style="font-weight: bold;">失物招领</view>
-        <text>失{{lost}}，拾{{found}}</text>
+        <text wx:if="{{login}}">失{{lost}}，拾{{found}}</text>
+        <text wx:else>您当前未登入 </text>
       </view>
     </view>
   </view>
   <!-- 列表 -->
   <view class="liebiao">
-    <view class="box" bindtap="fabu">
+    <button class="box" bindtap="fabu">
       <view class="left">
         <image src="../../images/send.png" class="icon mine_img"></image>
         <view style="line-height:80rpx;">我发布的</view>
       </view>
       <image class="icon mine_img" src="{{fabu?down:right}}"></image>
-    </view>
+    </button>
     <block wx:if="{{fabu}}">
       <view class="box1">失物
-        <text>发布{{lost}}</text>
+        <text wx:if="{{login}}">发布{{lost}}</text>
+        <text wx:else>未发布</text>
       </view>
       <view class="box1">拾物
-        <text>发布{{found}}</text>
+        <text  wx:if="{{login}}">发布{{found}}</text>
+        <text wx:else>未发布</text>
       </view>
     </block>
-    <view class="box" style="border-top: {{fabu?'2rpx solid #ccc':''}};" bindtap="previewImg">
+    <button class="box" style="border-top: {{fabu?'2rpx solid #ccc':''}};" bindtap="previewImg">
       <view class="left">
         <image src="../../images/yijian.png" class="icon mine_img"></image>
         <view style="line-height:80rpx;">意见反馈</view>
       </view>
-    </view>
-    <view class="box" style="border-top: {{fabu?'1rpx solid #ccc':''}};" bindtap="about">
+    </button>
+    <!--客服-->
+    <button open-type="contact" class="box" hover-class="none" style="border-top: {{fabu?'2rpx solid #ccc':''}};">
+        <view class="left">
+        <image src="../../images/wechat.png" class="icon mine_img"></image>
+        <view style="line-height:80rpx;">联系客服</view>
+        </view>
+    </button>
+    <button class="box" style="border-top: {{fabu?'2rpx solid #ccc':''}};" bindtap="about" hover-class="none">
       <view class="left">
         <image src="../../images/about.png" class="icon mine_img"></image>
         <view style="line-height:80rpx;">关于我们</view>
       </view>
-    </view>
+    </button>
   </view>
   <view class="botton" style="text-align:center;color:rgb(139, 138, 138);margin-top:20rpx">
     <text>-- 我是有底线的 --</text>

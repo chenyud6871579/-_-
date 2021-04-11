@@ -3,7 +3,7 @@ page {
 }
 
 .info {
-  /* background-color: #00a8f3; */
+  background-color: #81d8cf; 
   padding: 30rpx;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@ page {
 .info button{
   height: 70rpx;
   line-height: 70rpx;
-	background-color: #00a8f3;
+	background-color: #81d8cf;
 	border: none;
 	color: #fff;
 }
@@ -79,6 +79,7 @@ page {
 .liebiao {
   background-color: white;
   margin-top: 30rpx;
+  flex-flow: column; 
 }
 
 .box {
@@ -86,7 +87,7 @@ page {
   flex-direction: row;
   height: 80rpx;
   padding: 10rpx;
-  border-bottom: 5rpx solid #e6e3e3;
+  border-bottom: 3rpx solid #e6e3e3;
   justify-content: space-between;
 }
 
@@ -126,7 +127,7 @@ page {
 .header {
   position: relative;
   height:300rpx;
-  background: linear-gradient(to bottom, #56ccf2, #2f80ed);
+  background: linear-gradient(to bottom, #81d8cf, #81d8cf); 
 }
 
 .bg_ware {
@@ -137,4 +138,14 @@ page {
   mix-blend-mode: screen;
   height: 120rpx;
 }
+button::after { 
+  display: none; 
+  background-color: #fff; 
+  border-radius: 0; 
+} 
+button::before{ 
+  display: none; 
+  background-color: #fff; 
+  border-radius: 0; 
+} 
 

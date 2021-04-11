@@ -75,11 +75,12 @@ Page({
   },
   dizhi(){
       wx.openLocation({
-        latitude: 34.989420, //目的地位置
-        longitude: 118.424433,
+        latitude:39.032938, //目的地位置 
+        longitude: 117.719413, 
+       
         scale: 18,
-        name: '临沂职业学院新校区', //自定义
-        address: '校园骑士总部' //自定义
+        name: '南开大学泰达学院', //自定义 
+        address: '504' //自定义 
       })
   }
 })
