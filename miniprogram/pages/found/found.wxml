@@ -15,15 +15,15 @@
               </view>
               <view class="top">
                 <image class="call" src="../../images/call.png" bindtap="call" data-call="{{item}}"></image>
+                <image class="call" src="../../images/qq.png" bindtap="wechat" data-wechat="{{item}}"></image>
                 <image class="call" src="../../images/wechat.png" bindtap="wechat" data-wechat="{{item}}"></image>
               </view>
             </view>
-            <view class="line"></view>
             <view class="info">
               <text>物品：{{item.name}}</text>
             </view>
             <view class="info">
-              <text>{{item.info}}</text>
+              <text>说明：{{item.info}}</text>
             </view>
             <scroll-view scroll-x="true" class="img_box">
               <block wx:key="index" wx:for="{{item.fileIDs}}" wx:for-item="itemImg">
@@ -50,6 +50,7 @@
               </view>
               <view class="top">
                 <image class="call" src="../../images/call.png" bindtap="call" data-call="{{item}}"></image>
+                <image class="call" src="../../images/qq.png" bindtap="wechat" data-wechat="{{item}}"></image>
                 <image class="call" src="../../images/wechat.png" bindtap="wechat" data-wechat="{{item}}"></image>
               </view>
             </view>
@@ -58,7 +59,7 @@
               <text>物品：{{item.name}}</text>
             </view>
             <view class="info">
-              <text>{{item.info}}</text>
+              <text>说明：{{item.info}}</text>
             </view>
             <scroll-view scroll-x="true" class="img_box">
               <block wx:key="index" wx:for="{{item.fileIDs}}" wx:for-item="itemImg">

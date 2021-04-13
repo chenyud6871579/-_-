@@ -121,10 +121,6 @@ Page({
     var that = this
     db.collection('found')
       .orderBy('createTime', 'desc') //按发布视频排序
-      // .where({
-      //   _openid: 'oSUbo5OapMYUw4KY0R6ef6FPkEBg'
-        
-      // })
       .get({
         success(res) {
           that.setData({
