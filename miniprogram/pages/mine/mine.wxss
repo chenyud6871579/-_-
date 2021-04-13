@@ -147,5 +147,6 @@ button::before{
   display: none; 
   background-color: #fff; 
   border-radius: 0; 
+  
 } 
 

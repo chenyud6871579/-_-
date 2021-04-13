@@ -13,6 +13,7 @@ Page({
         that.setData({
           openid: res.data
         })
+        console.log(that.data.openid)
       },
     })
     this.getLost()
@@ -118,8 +119,18 @@ Page({
   },
   getFound: function() {
     var that = this
-    db.collection('found')
+    wx.getStorage({
+      key: 'openid',
+      success: function(res) {
+        that.setData({
+          openid: res.data
+        })
+        console.log(that.data.openid)
+        db.collection('found')
       .orderBy('createTime', 'desc') //按发布视频排序
+      .where({
+        _openid: that.data.openid
+      })
       .get({
         success(res) {
           that.setData({
@@ -130,6 +141,9 @@ Page({
           console.log("请求失败", res)
         }
       })
+      },
+    })
+    
   },
   //打开分类按钮
   send: function() {
