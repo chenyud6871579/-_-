@@ -1,5 +1,5 @@
 <view class="all">
-  <swiper autoplay="true" interval="5000">
+  <swiper autoplay="true" interval="10000">
     <swiper-item>
       <image src="../../images/p1.jpg"></image>
     </swiper-item>
