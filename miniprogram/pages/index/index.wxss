@@ -5,16 +5,16 @@ page{
 }
 image{
   width: 100%;
-  height: 30vh
+  height: 35vh
 }
 swiper{
-  height: 30vh;
+  height: 35vh;
   /* box-shadow: 10rpx 10rpx 10rpx rgba(0, 0, 0, 0.2); */
-  border-radius: 20rpx;
+  border-radius: 10rpx;
 
 }
 swiper-item{
-  border-radius: 20rpx;
+  border-radius: 10rpx;
 }
 .all{
   width: 95vw;
@@ -22,7 +22,7 @@ swiper-item{
   margin-top: 3vw;
 }
 .buttons{
-  margin-top: 60rpx;
+  margin-top: 50rpx;
 }
 .line{
   margin: auto;
@@ -36,11 +36,11 @@ swiper-item{
   flex-direction: row;
   background-color: #81d8cf;
   border-radius: 15rpx;
-  margin-top: 80rpx;
-  width: 75vw;
-  height: 20vw;
+  margin-top: 90rpx;
+  width: 70vw;
+  height: 15vw;
   justify-content: center;
-  font-size: 35rpx;
+  font-size: 30rpx;
   /* box-shadow: 10rpx 10rpx 10rpx rgba(0, 0, 0, 0.2); */
 }
 .box:active{
@@ -48,11 +48,11 @@ swiper-item{
   flex-direction: row;
   background-color: #01847f;
   border-radius: 15rpx;
-  margin-top: 100rpx;
-  width: 75vw;
-  height: 20vw;
+  margin-top: 90rpx;
+  width: 70vw;
+  height: 15vw;
   justify-content: center;
-  font-size: 35rpx;
+  font-size: 30rpx;
   /* box-shadow: 10rpx 10rpx 10rpx rgba(0, 255, 186, 0.5); */
 }
 .box image{
@@ -62,7 +62,7 @@ swiper-item{
 }
 .box view{
   height: 20vw;
-  line-height: 20vw;
+  line-height: 15vw;
   color: white;
   font-size: 6vw;
 }
