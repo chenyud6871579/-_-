@@ -8,7 +8,8 @@
     "pages/create/find_create/find_create",
     "pages/lost/lost",
     "pages/send/send",
-    "pages/found/found"
+    "pages/found/found",
+    "pages/myfound/myfound"
   ],
   "tabBar": {
     "color": "#707070",

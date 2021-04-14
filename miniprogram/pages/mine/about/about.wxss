@@ -3,8 +3,8 @@
 	background-color: #fff;
 }
 .about_logo image{
-	width: 400rpx;
-	height: 400rpx;
+	width: 600rpx;
+	height: 450rpx;
 	display: block;
 	margin:0px auto;
 }
@@ -12,6 +12,7 @@
 .about_data{
 	background-color: #fff;
 	border-top: 1rpx solid #ccc;
+	color:#333333
 }
 .about_data view{
 	width: 95%;
@@ -27,7 +28,9 @@
 	line-height: 80rpx;
 	background-color: #fff;
 	padding-left: 20rpx;
+	color:#333333
 }
 .border-b{
 	border-top: 1px solid #ccc;
+	color:#333333
 }

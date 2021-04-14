@@ -1,13 +1,13 @@
 <view class="about_logo">
-  <image src='/images/logo.jpg'></image>
+  <image src='/images/logo.png'></image>
  </view>
  <view class='about_data'>
-   <view>目前不承接广告谢谢！</view>
+   <view>我们一直致力于为广大客户提供用心的优质项目和相关服务！</view>
   </view>
   
 <view class='about_title'>
   联系我们
 </view>
-<view class='lianxi_list' bindtap='makePhone'>合作电话: 187-5402-6672</view>
-<view class='lianxi_list border-b'>E-mail: freeroot@163.com</view>
+<view class='lianxi_list' bindtap='makePhone'>合作电话: 186-5935-7882</view>
+<view class='lianxi_list border-b'>E-mail: 1812976@mail.nankai.edu.cn</view>
 <view class='lianxi_list border-b' bindtap="dizhi">地址：天津市滨海新区南开大学泰达学院</view>
