@@ -13,9 +13,10 @@ page {
 .info button{
   height: 70rpx;
   line-height: 70rpx;
-	background-color: #81d8cf;
+  margin-top: 15rpx;
+	background-color: #fff;
 	border: none;
-	color: #fff;
+	color: #81d8cf;
 }
 .name{
   height: 70rpx;
@@ -85,8 +86,8 @@ page {
 .box {
   display: flex;
   flex-direction: row;
-  height: 80rpx;
-  padding: 10rpx;
+  height: 100rpx;
+  padding: 15rpx;
   border-bottom: 3rpx solid #e6e3e3;
   justify-content: space-between;
 }
@@ -95,16 +96,17 @@ page {
   /* background-color: #e0f5ff; */
   display: flex;
   flex-direction: row;
-  text-indent: 60rpx;
-  height: 50rpx;
+  text-indent: 40rpx;
+  height: 60rpx;
   line-height: 50rpx;
   padding: 10rpx;
   justify-content: space-between;
+  
 }
 
 .box1 text {
   margin: 0 60rpx;
-  font-size: 25rpx;
+  font-size: 20rpx;
 }
 
 .left {
@@ -113,8 +115,8 @@ page {
 }
 
 .mine_img {
-  width: 80rpx;
-  height: 80rpx;
+  width: 120rpx;
+  height: 120rpx;
   margin:10rpx 30rpx;
 }
 .icon{
@@ -149,4 +151,5 @@ button::before{
   border-radius: 0; 
   
 } 
+
 

@@ -17,8 +17,8 @@
 </view>
 <view class="bg">
   <!--快捷导航-->
-  <view class="navigation">
-    <!-- <view class="navigation_list" style="margin-left:10rpx">
+      <!-- <view class="navigation"> -->
+      <!-- <view class="navigation_list" style="margin-left:10rpx">
       <image src="/images/biaobai.png" class="list_left"></image>
       <view class="list_right">
         <view style="font-weight: bold;">表白墙</view>
@@ -33,16 +33,16 @@
         <text>发布{{xianzhi}}</text>
       </view>
     </view> -->
-   <!-- <view class="list_shuxian"></view>-->
-    <view class="navigation_list">
+      <!-- <view class="list_shuxian"></view>-->
+      <!-- <view class="navigation_list">
       <image src="/images/lost.png" class="list_left"></image>
       <view class="list_right">
         <view style="font-weight: bold;">失物招领</view>
         <text wx:if="{{login}}">失{{lost}}，拾{{found}}</text>
         <text wx:else>您当前未登入 </text>
       </view>
-    </view>
-  </view>
+    </view> -->
+      <!-- </view> -->
   <!-- 列表 -->
   <view class="liebiao">
     <button class="box" bindtap="fabu">
@@ -52,6 +52,7 @@
       </view>
       <image class="icon mine_img" src="{{fabu?down:right}}"></image>
     </button>
+    
     <block wx:if="{{fabu}}">
       <view class="box1">失物
         <text wx:if="{{login}}">发布{{lost}}</text>
@@ -62,12 +63,12 @@
         <text wx:else>未发布</text>
       </view>
     </block>
-    <button class="box" style="border-top: {{fabu?'2rpx solid #ccc':''}};" bindtap="previewImg">
+    <!-- <button class="box" style="border-top: {{fabu?'2rpx solid #ccc':''}};" bindtap="previewImg">
       <view class="left">
         <image src="../../images/yijian.png" class="icon mine_img"></image>
         <view style="line-height:80rpx;">意见反馈</view>
       </view>
-    </button>
+    </button> -->
     <!--客服-->
     <button open-type="contact" class="box" hover-class="none" style="border-top: {{fabu?'2rpx solid #ccc':''}};">
         <view class="left">
@@ -82,7 +83,5 @@
       </view>
     </button>
   </view>
-  <view class="botton" style="text-align:center;color:rgb(139, 138, 138);margin-top:20rpx">
-    <text>-- 我是有底线的 --</text>
-  </view>
+  
 </view>
