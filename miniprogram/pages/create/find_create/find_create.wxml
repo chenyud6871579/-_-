@@ -12,7 +12,7 @@
 
       <view class="box_center">
         <view class="left">详细说明:</view>
-        <textarea placeholder="请输入捡到的过程，时间地点之类的..." bindinput="info"></textarea>
+        <textarea placeholder="请输入物品相关信息" bindinput="info"></textarea>
       </view>
       <view class="pic_pos">
         <scroll-view scroll-x="true" class="images_box">
