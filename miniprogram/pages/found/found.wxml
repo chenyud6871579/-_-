@@ -1,5 +1,6 @@
 <view>
-  <swiper current="{{page}}" duration="300" bindchange="switchTab">
+  <!-- <swiper current="{{page}}" duration="300" bindchange="switchTab"> -->
+  <swiper duration="300" bindchange="switchTab">
     <swiper-item>
       <scroll-view scroll-y="true" style="height:100%">
         <block wx:for="{{dataList1}}" wx:key='index'>
@@ -38,7 +39,7 @@
     </swiper-item>
   </swiper>
 </view>
-<!-- <image class="send" src="../../images/biaobai/send.png" bindtap="send"></image> -->
+<!-- <image class="send" src="../../images/send.png" bindtap="send"></image> -->
 <block wx:if="{{isSend}}">
   <view class="show_send"  bindtap="back">
     <view class="bg"></view>
