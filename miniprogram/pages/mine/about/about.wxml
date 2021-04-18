@@ -8,6 +8,6 @@
 <view class='about_title'>
   联系我们
 </view>
-<view class='lianxi_list' bindtap='makePhone'>合作电话: 186-5935-7882</view>
-<view class='lianxi_list border-b'>E-mail: 1812976@mail.nankai.edu.cn</view>
-<view class='lianxi_list border-b' bindtap="dizhi">地址：天津市滨海新区南开大学泰达学院</view>
+<view class='lianxi_list' bindtap='makePhone'>电 话: 186-5935-7882</view>
+<view class='lianxi_list border-b'>邮 箱: 1812976@mail.nankai.edu.cn</view>
+<view class='lianxi_list border-b t' bindtap="dizhi">地 址: 天津市滨海新区南开大学泰达学院</view>
