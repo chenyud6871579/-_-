@@ -37,8 +37,8 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "appid": "wx70ecaaaafe06e6e2",
-  "projectname": "失与拾",
+  "appid": "wxf3a544db34c0f850",
+  "projectname": "拾与失",
   "libVersion": "2.14.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
