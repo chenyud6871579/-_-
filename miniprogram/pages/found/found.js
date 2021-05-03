@@ -2,8 +2,60 @@ const db = wx.cloud.database()
 Page({
   data: {
     page: 1, //预设当前项的值
-    isSend: false
+    isSend: false,
+    inputShowed: false,
+    inputVal: ""
   },
+  mixins: [require('../../themeChanged')],
+  showInput: function () {
+    this.setData({
+        inputShowed: true
+    });
+},
+hideInput: function () {
+    this.setData({
+        inputVal: "",
+        inputShowed: false
+    });
+},
+clearInput: function () {
+    this.setData({
+        inputVal: ""
+    });
+},
+
+inputTyping: function (e) {
+  this.setData({
+    inputVal: e.detail.value
+});
+  var that = this
+  const _ = db.command
+  db.collection('found').where(_.or([
+  {
+    info: db.RegExp({
+      regexp: this.data.inputVal, //做为关键字进行匹配
+      options: 'i', //不区分大小写
+    })
+  },
+  {
+    name: db.RegExp({
+      regexp: this.data.inputVal, //做为关键字进行匹配
+      options: 'i', //不区分大小写
+    })
+  }
+]))
+    .orderBy('createTime', 'desc') //按发布时间排序
+    .get({
+      success(res) {
+        that.setData({
+          dataList1_search: res.data
+        })
+      },
+      fail(res) {
+        console.log("请求失败", res)
+      }
+    })
+},
 
   onLoad: function(e) {
     var that = this
@@ -119,7 +171,7 @@ Page({
   getFound: function() {
     var that = this
     db.collection('found')
-      .orderBy('createTime', 'desc') //按发布视频排序
+      .orderBy('createTime', 'desc') //按发布时间排序
       .get({
         success(res) {
           that.setData({

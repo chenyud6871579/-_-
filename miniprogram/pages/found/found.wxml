@@ -1,9 +1,22 @@
-<view>
-  <!-- <swiper current="{{page}}" duration="300" bindchange="switchTab"> -->
-  <swiper duration="300" bindchange="switchTab">
-    <swiper-item>
-      <scroll-view scroll-y="true" style="height:100%">
-        <block wx:for="{{dataList1}}" wx:key='index'>
+<view class="page" data-weui-theme="{{theme}}">
+	<view class="page__bd">
+		<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+			<form class="weui-search-bar__form">
+				<view class="weui-search-bar__box">
+					<i class="weui-icon-search"></i>
+                    <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping"/>
+                    <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+				</view>
+				<label class="weui-search-bar__label" bindtap="showInput">
+					<i class="weui-icon-search"></i>
+                    <span class="weui-search-bar__text">搜索</span>
+				</label>
+			</form>
+            <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+    </view>
+    
+		<view class="searchbar-result" wx:if="{{inputVal.length > 0}}">
+			<view wx:for="{{dataList1_search}}" wx:key='index'>
           <view class="box">
             <view class="top">
               <view class="top">
@@ -34,11 +47,87 @@
             </view>
             <view class="time" wx:else>{{item.sendTime}}</view>
           </view>
-        </block>
+        </view>
+    </view>
+    
+    <view class="searchbar-result" wx:else>
+			<view wx:for="{{dataList1}}" wx:key='index'>
+          <view class="box">
+            <view class="top">
+              <view class="top">
+                <image class="touxiang" src="{{item.touxiang}}"></image>
+                <view class="title">{{item.userName}}</view>
+              </view>
+              <view class="top">
+                <image class="call" src="../../images/call.png" bindtap="call" data-call="{{item}}"></image>
+                <image class="call" src="../../images/qq.png" bindtap="wechat" data-wechat="{{item}}"></image>
+                <image class="call" src="../../images/wechat.png" bindtap="wechat" data-wechat="{{item}}"></image>
+              </view>
+            </view>
+            <view class="line"></view>
+            <view class="info">
+              <text>物品：{{item.name}}</text>
+            </view>
+            <view class="info">
+              <text>说明：{{item.info}}</text>
+            </view>
+            <scroll-view scroll-x="true" class="img_box">
+              <block wx:key="index" wx:for="{{item.fileIDs}}" wx:for-item="itemImg">
+                <image class='img' src='{{itemImg}}' mode='aspectFill' data-img='{{[itemImg,item.fileIDs]}}' bindtap="previewImg"></image>
+              </block>
+            </scroll-view>
+            <view class="box_bottom" wx:if="{{openid==item._openid}}">
+              <view class="delete" bindtap="delete1" data-t="{{item}}">删除</view>
+              <view class="time">{{item.sendTime}}</view>
+            </view>
+            <view class="time" wx:else>{{item.sendTime}}</view>
+          </view>
+        </view>
+    </view>
+	</view>
+</view>
+
+<!-- <view>
+  <swiper current="{{page}}" duration="300" bindchange="switchTab">
+  <swiper duration="300" bindchange="switchTab">
+    <swiper-item>
+      <scroll-view scroll-y="true" style="height:100%">
+        <view wx:for="{{dataList1}}" wx:key='index'>
+          <view class="box">
+            <view class="top">
+              <view class="top">
+                <image class="touxiang" src="{{item.touxiang}}"></image>
+                <view class="title">{{item.userName}}</view>
+              </view>
+              <view class="top">
+                <image class="call" src="../../images/call.png" bindtap="call" data-call="{{item}}"></image>
+                <image class="call" src="../../images/qq.png" bindtap="wechat" data-wechat="{{item}}"></image>
+                <image class="call" src="../../images/wechat.png" bindtap="wechat" data-wechat="{{item}}"></image>
+              </view>
+            </view>
+            <view class="line"></view>
+            <view class="info">
+              <text>物品：{{item.name}}</text>
+            </view>
+            <view class="info">
+              <text>说明：{{item.info}}</text>
+            </view>
+            <scroll-view scroll-x="true" class="img_box">
+              <block wx:key="index" wx:for="{{item.fileIDs}}" wx:for-item="itemImg">
+                <image class='img' src='{{itemImg}}' mode='aspectFill' data-img='{{[itemImg,item.fileIDs]}}' bindtap="previewImg"></image>
+              </block>
+            </scroll-view>
+            <view class="box_bottom" wx:if="{{openid==item._openid}}">
+              <view class="delete" bindtap="delete1" data-t="{{item}}">删除</view>
+              <view class="time">{{item.sendTime}}</view>
+            </view>
+            <view class="time" wx:else>{{item.sendTime}}</view>
+          </view>
+        </view>
       </scroll-view>
     </swiper-item>
   </swiper>
-</view>
+</view> -->
 <!-- <image class="send" src="../../images/send.png" bindtap="send"></image> -->
 <block wx:if="{{isSend}}">
   <view class="show_send"  bindtap="back">
