@@ -13,12 +13,6 @@ Page({
   onLoad: function(options) {
 
   },
-  // bindGetUserInfo: function(e) {
-  //   console.log(e.detail.userInfo)
-  //   this.setData({
-  //     isShow: false
-  //   })
-  // },
 
   lost: function() {
     wx.navigateTo({
