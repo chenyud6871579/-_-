@@ -5,14 +5,12 @@
       <view class="box_top">看我捡到了个啥(′▽`〃)</view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left">物品名称:</view>
-        <input placeholder="请输入物品名称" bindinput="name"></input>
+        <input placeholder="物品名称（20字以内）" bindinput="name" style='font-size:17px;'></input>
       </view>
       <view class="line"></view>
 
       <view class="box_center">
-        <view class="left">详细说明:</view>
-        <textarea placeholder="请输入物品相关信息" bindinput="info"></textarea>
+        <textarea placeholder="物品详情" bindinput="info" class= 'text'></textarea>      
       </view>
       <view class="pic_pos">
         <scroll-view scroll-x="true" class="images_box">
@@ -32,19 +30,20 @@
     </view>
     <view class="box">
       <view class="box_center">
-        <view class="left2">QQ号：</view>
-        <input placeholder="请输入你的QQ号" bindinput="pCall"></input>
+        <view class="left2">QQ号</view>
+        <input placeholder="    请输入你的QQ号" bindinput="pCall"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left2">手机号:</view>
-        <input placeholder="请输入你的手机号" bindinput="pCall"></input>
+        <view class="left2">手机号</view>
+        <input placeholder="    请输入你的手机号" bindinput="pCall"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left2">微信号:</view>
-        <input placeholder="请输入你的微信号" bindinput="pWechat"></input>
+        <view class="left2">微信号</view>
+        <input placeholder="    请输入你的微信号" bindinput="pWechat"></input>
       </view>
+      <view class="line"></view>
     </view>
   </block>
 </view>
