@@ -16,12 +16,12 @@ page{
 
 .item1{
   position: absolute;
-  top: 150rpx;
+  top: 180rpx;
   left:200rpx;
 }
 
 .item2{
   position: absolute;
-  bottom: 150rpx;
+  bottom: 180rpx;
   left:200rpx;
 }
