@@ -31,6 +31,12 @@ inputTyping: function (e) {
   var that = this
   const _ = db.command
   db.collection('found').where(_.or([
+    {
+      position: db.RegExp({
+        regexp: this.data.inputVal, //做为关键字进行匹配
+        options: 'i', //不区分大小写
+      })
+    },
   {
     info: db.RegExp({
       regexp: this.data.inputVal, //做为关键字进行匹配

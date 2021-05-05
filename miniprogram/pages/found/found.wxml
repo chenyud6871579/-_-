@@ -29,6 +29,7 @@
                 <image class="call" src="../../images/wechat.png" bindtap="wechat" data-wechat="{{item}}"></image>
               </view>
             </view>
+            <text class="tag">{{item.position}}</text>
             <view class="line"></view>
             <view class="info">
               <text>物品：{{item.name}}</text>
@@ -64,6 +65,7 @@
                 <image class="call" src="../../images/wechat.png" bindtap="wechat" data-wechat="{{item}}"></image>
               </view>
             </view>
+            <text class="tag">{{item.position}}</text>
             <view class="line"></view>
             <view class="info">
               <text>物品：{{item.name}}</text>

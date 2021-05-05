@@ -83,6 +83,19 @@ swiper {
   font-weight: bold;
 }
 
+.tag {
+  font-size: 27rpx;
+  color: white;
+  padding: 6rpx 10rpx;
+  margin-left: 75rpx;
+  border-radius: 10%;
+  background-color: #01847f;
+}
+
+.line {
+  margin-top: 10rpx;
+}
+
 .info {
   margin-left: 75rpx;
   color: #363636;
@@ -108,7 +121,7 @@ swiper {
   text-align: right;
   margin-right: 10rpx;
   color: #707070;
-  font-size: 20rpx;
+  font-size: 24rpx;
 }
 
 .img_box {
