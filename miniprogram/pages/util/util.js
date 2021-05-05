@@ -5,8 +5,9 @@ const formatTime = date => {
   const hour = date.getHours()
   const minute = date.getMinutes()
   const second = date.getSeconds()
-
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
+  const date_num = [year, month, day].map(formatNumber)
+  return date_num[0] + '年' + date_num[1] + '月' + date_num[2] + '日' + ' '
+  + [hour, minute, second].map(formatNumber).join(':')
 }
 
 const formatNumber = n => {

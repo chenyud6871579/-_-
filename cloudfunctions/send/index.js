@@ -17,6 +17,7 @@ exports.main = async(event, context) => {
         pName: event.pName,
         pCall: event.pCall,
         pWechat: event.pWechat,
+        position: event.position,
         name: event.name,
         price: event.price,
         info: event.info,

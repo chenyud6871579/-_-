@@ -64,6 +64,12 @@ Page({
       info: event.detail.value
     })
   },
+  position(event) {
+    console.log("输入的对象", event.detail.value)
+    this.setData({
+      position: event.detail.value
+    })
+  },
   // 删除照片 &&
   imgDelete1: function(e) {
     let that = this;
@@ -119,7 +125,7 @@ Page({
     if (!this.data.imgbox.length) {
       wx.showToast({
         icon: 'none',
-        title: '图片类容为空'
+        title: '图片内容为空'
       });
     } else {
       //上传图片到云存储
@@ -172,6 +178,7 @@ Page({
             pName: this.data.pName,
             pCall: this.data.pCall,
             pWechat: this.data.pWechat,
+            position: this.data.position,
             name: this.data.name,
             price: this.data.price,
             info: this.data.info,
