@@ -67,20 +67,58 @@ Page({
   },
 
   find_create: function () {
-      wx.navigateTo({
-        url: 'find_create/find_create',
-        success: function (res) { },
-        fail: function (res) { },
-        complete: function (res) { },
-      })
+    var that = this
+    wx.getStorage({
+      key: 'login',
+      success: function(res) {
+        if (res.data) {
+          wx.navigateTo({
+            url: 'find_create/find_create',
+            success: function (res) { },
+            fail: function (res) { },
+            complete: function (res) { },
+          })
+        } else {
+          wx.showToast({
+            icon: "none",
+            title: '您还未登录'
+          })
+        }
+      },
+      fail: function (res) {
+        wx.showToast({
+          icon: "none",
+          title: '您还未登录'
+        })
+      }
+    })
     },
 
     lost_create: function () {
-      wx.navigateTo({
-        url: 'lost_create/lost_create',
-        success: function (res) { },
-        fail: function (res) { },
-        complete: function (res) { },
+      var that = this
+      wx.getStorage({
+        key: 'login',
+        success: function(res) {
+          if (res.data) {
+            wx.navigateTo({
+              url: 'lost_create/lost_create',
+              success: function (res) { },
+              fail: function (res) { },
+              complete: function (res) { },
+            })
+          } else {
+            wx.showToast({
+              icon: "none",
+              title: '您还未登录'
+            })
+          }
+        },
+        fail: function (res) {
+          wx.showToast({
+            icon: "none",
+            title: '您还未登录'
+          })
+        }
       })
     },
 
