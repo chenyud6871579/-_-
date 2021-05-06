@@ -206,6 +206,7 @@ Page({
             pCall: this.data.pCall,
             pWechat: this.data.pWechat,
             position: this.data.position,
+            pQQnum: this.data.pQQnum,
             name: this.data.name,
             price: this.data.price,
             info: this.data.info,

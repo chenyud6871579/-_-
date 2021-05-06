@@ -70,6 +70,12 @@ Page({
       position: event.detail.value
     })
   },
+  pQQnum(event) {
+    console.log("输入的对象", event.detail.value)
+    this.setData({
+      pQQnum: event.detail.value
+    })
+  },
   // 删除照片 &&
   imgDelete1: function(e) {
     let that = this;

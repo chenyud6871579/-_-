@@ -8,6 +8,7 @@ Page({
     imgbox: [], //选择图片
     fileIDs: [], //上传云存储后的返回值
     type:'lostfound',
+    isChecked: false,
   },
 
   /**
@@ -65,9 +66,15 @@ Page({
     })
   },
   position(event) {
-    console.log("输入的对象", event.detail.value)
+    console.log("radio发生change事件，携带value值为：", event.detail.value)
     this.setData({
       position: event.detail.value
+    })
+  },
+  pQQnum(event) {
+    console.log("输入的对象", event.detail.value)
+    this.setData({
+      pQQnum: event.detail.value
     })
   },
   // 删除照片 &&
@@ -110,7 +117,11 @@ Page({
       }
     })
   },
-
+  serviceSelection(){
+    this.setData({
+      isChecked:true
+    })
+},
    //发布按钮
    fb: function(e) {
     if (this.data.type == 'lostlost') {
