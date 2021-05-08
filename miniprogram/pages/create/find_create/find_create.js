@@ -151,7 +151,6 @@ Page({
                 fileIDs: that.data.fileIDs.concat(res.result.fileID)
               });
               console.log(res.result.fileID) //输出上传后图片的返回地址
-              console.log(3)
               wx.cloud.callFunction({
                 name: 'face',
                 data: {

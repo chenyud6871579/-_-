@@ -35,21 +35,6 @@ const params = {
       }
     })
   })
-
-// const params = {
-//   "Url":url
-// };
-// client.DetectFace(params).then(
-//   (data) => {
-//     console.log(1)
-//     console.log(data);
-//     console.log(1)
-//     callback(data);
-//   },
-//   (err) => {
-//     console.error("error", err);
-//   }
-// )
 }
 // 云函数入口函数
 exports.main = async (event, context) => {
@@ -59,8 +44,5 @@ exports.main = async (event, context) => {
     fileList,})
   const url = result.fileList[0].tempFileURL  
   datas = await synDetectFace(url)
-  console.log(2)
-  console.log(datas)
-  console.log(2)
-  return {datas,url}
+  return datas
 }
