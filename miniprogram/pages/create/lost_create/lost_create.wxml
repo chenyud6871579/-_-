@@ -30,17 +30,17 @@
     </view>
     <view class="box">
       <view class="box_center">
-        <view class="left2">校区</view>
-        <input placeholder="    请输入你的校区" bindinput="position"></input>
+        <view class="left">QQ号</view>
+        <input placeholder="    请输入你的QQ号" bindinput="pQQnum"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left2">手机号</view>
+        <view class="left">手机号</view>
         <input placeholder="    请输入你的手机号" bindinput="pCall"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
-        <view class="left2">微信号</view>
+        <view class="left">微信号</view>
         <input placeholder="    请输入你的微信号" bindinput="pWechat"></input>
       </view>
       <view class="line"></view>
