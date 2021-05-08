@@ -1,4 +1,5 @@
 var util = require('../../util/util.js');
+
 Page({
 
   /**
@@ -98,7 +99,6 @@ Page({
         // console.log(res.tempFilePaths)
         // 返回选定照片的本地文件路径列表，tempFilePath可以作为img标签的src属性显示图片
         var tempFilePaths = res.tempFilePaths
-
         if (imgbox.length == 0) {
           imgbox = tempFilePaths
         } else if (5 > imgbox.length) {
@@ -151,6 +151,19 @@ Page({
                 fileIDs: that.data.fileIDs.concat(res.result.fileID)
               });
               console.log(res.result.fileID) //输出上传后图片的返回地址
+              console.log(3)
+              wx.cloud.callFunction({
+                name: 'face',
+                data: {
+                  myfileID:res.result.fileID
+                },
+                success: res => {
+                  console.log(1)
+                  console.log(res.result)
+                  console.log(1)
+                },
+              })
+
               reslove();
               // wx.hideLoading();
               wx.showToast({
