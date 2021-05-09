@@ -55,7 +55,7 @@ radio .wx-radio-input.wx-radio-input-checked {
 
 .text {
   font-size:17px;
-  height: 4em;
+  height: 3em;
 }
 
 .left {
@@ -126,8 +126,8 @@ button {
   background-color: #f96159;
   color: white;
   position: fixed;
-  margin-top: 1rpx;
   margin-left: 37rpx;
+  bottom: 10rpx;
 }
 
 .select_box{

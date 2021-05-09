@@ -59,12 +59,12 @@
       <view class="line"></view>
       <view class="box_center">
         <view class="left">QQ号</view>
-        <input placeholder="请输入你的QQ号" bindinput="pQQnum"></input>
+        <input type="number" placeholder="请输入你的QQ号" bindinput="pQQnum"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
         <view class="left">手机号</view>
-        <input placeholder="请输入你的手机号" bindinput="pCall"></input>
+        <input type="number" placeholder="请输入你的手机号" bindinput="pCall"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">

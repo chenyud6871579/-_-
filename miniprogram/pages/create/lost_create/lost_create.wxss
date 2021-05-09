@@ -1,3 +1,5 @@
+
+
 .all {
   width: 90vw;
   height: 92vh;
@@ -24,8 +26,26 @@
   border: 1rpx #e6e3e3 solid;
   position: relative;
   left: -3vw;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.radio-group{
+  align-items: center;
+}
+
+radio .wx-radio-input{
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  border-color:#1f0e0e !important;
+  position: relative;
+  z-index:1;
+}
+radio .wx-radio-input.wx-radio-input-checked {
+  border-color:#028318 !important;
+  position: relative;
+  z-index:1;
 }
 
 .box_center {
@@ -35,32 +55,37 @@
 
 .text {
   font-size:17px;
-  height: 6em;
+  height: 3em;
 }
 
 .left {
   width: 23%;
 }
-
+.left2 {
+  width: 25%;
+  margin-top: 13rpx;
+}
 input, textarea {
   width: 75%;
+  position: relative;
+  z-index:1;
 }
 
 /* 图片 */
 .images_box {
   white-space: nowrap;
-  height: 150rpx;
-  width: 75%;
+  height: 160rpx;
+  width: 100%;
   overflow: hidden
 }
 
 .img-box {
   display: inline-block;
-  border: 3rpx;
-  border-style: dashed;
+  border: 2rpx;
+  border-style: solid;
   border-color: rgba(0, 0, 0, 0.452);
-  width: 100rpx;
-  height: 100rpx;
+  width: 120rpx;
+  height: 120rpx;
   margin-right: 35rpx;
   margin-top: 30rpx;
   margin-bottom: 20rpx;
@@ -70,8 +95,8 @@ input, textarea {
 /* 删除图片 */
 
 .img-delect {
-  width: 60rpx;
-  height: 60rpx;
+  width: 30rpx;
+  height: 30rpx;
   border-radius: 50%;
   position: absolute;
   right: -15rpx;
@@ -87,19 +112,72 @@ input, textarea {
 .img_delete {
   width: 100%;
   height: 100%;
-  right: 15rpx;
-  top: 15rpx;
+  position: absolute;
+  right: 0rpx;
+  top: 0rpx;
 }
 
 button {
   width: 90vw;
-  height: 9vh;
-  line-height: 9vh;
+  height: 8vh;
+  line-height: 8vh;
   border: none;
   border-radius: 10rpx;
   background-color: #f96159;
   color: white;
   position: fixed;
-  bottom: 25px;
   margin-left: 37rpx;
+  bottom: 10rpx;
 }
+
+.select_box{
+  background: #fff;
+  width: 100%;
+  position: relative;
+  border: 2rpx solid #ddd;
+ }
+ .select{
+  box-sizing: border-box;
+  width: 100%;
+  height: 70rpx;
+  border:1px solid #efefef;
+  border-radius: 8rpx;
+  display: flex;
+  align-items: center;
+  padding: 0 20rpx;
+ }
+ .select_text{
+  font-size: 17px;
+  flex: 1;
+ }
+ .select_img{
+  width: 40rpx;
+  height: 40rpx;
+  display: block;
+  transition:transform 0.3s;
+ }
+ .select_img_rotate{
+  transform:rotate(180deg); 
+ }
+ .option_box{
+  position: absolute;
+  top: 70rpx;
+  width: 100%;
+  border:1px solid #efefef;
+  box-sizing: border-box;
+  height: 0;
+  overflow-y: auto;
+  border-top: 0;
+  background: #fff;
+  transition: height 0.3s;
+ }
+ .option{
+  display: block;
+  line-height: 40rpx;
+  font-size: 35rpx;
+  border-bottom: 1px solid #efefef;
+  padding: 18rpx;
+  position: relative;
+  z-index:99;
+  background-color:  #efefef;
+ }
