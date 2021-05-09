@@ -146,9 +146,10 @@ Page({
       let promiseArr = [];
       for (let i = 0; i < this.data.imgbox.length; i++) {
         promiseArr.push(new Promise((reslove, reject) => {
+
           let item = this.data.imgbox[i];
           let suffix = /\.\w+$/.exec(item)[0]; //正则表达式返回文件的扩展名
-         
+
           var that = this
           const fileContent = wx.getFileSystemManager().readFileSync(item, 'base64');
           wx.cloud.callFunction({
@@ -171,13 +172,34 @@ Page({
                   console.log(1)
                   console.log(res.result)
                   console.log(1)
-                },
-              })
+                  
+                  that.setData({
+                    fileIDs: []
+                  });
 
-              reslove();
-              // wx.hideLoading();
-              wx.showToast({
-                title: "上传成功",
+                  wx.hideLoading();
+                  wx.showModal({
+                    title: '提示',
+                    content: '检测到发布内容包含个人隐私，请重新填写发布内容',
+                    success (res) {
+                      if (res.confirm) {
+                        console.log('用户点击确定')
+                      } else if (res.cancel) {
+                        console.log('用户点击取消')
+                      }
+                    }
+                  })
+                },
+                fail:res => {
+                  console.log(1)
+                  console.log(res.result)
+                  console.log(1)
+
+                  reslove();
+                  wx.showToast({
+                    title: "上传成功",
+                  })
+                }
               })
             },
             fail: function(res) {
