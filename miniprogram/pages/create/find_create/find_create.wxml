@@ -18,7 +18,7 @@
             <view class='img-box'>
               <image class='img' src='{{item}}' mode="aspectFill"></image>
               <view class='img-delect' data-deindex='{{index}}' bindtap='imgDelete1'>
-                <image class='img' src='/images/delete.png'></image>
+                <image class='img_delete' src='/images/delete.png'></image>
               </view>
             </view>
           </block>
@@ -29,6 +29,19 @@
       </view>
     </view>
     <view class="box">
+      <view class="box_center">
+        <view class="left2">类别</view>
+        <view class='select_box'>
+          <view class='select' catchtap='selectTap'>
+            <text class='select_text'>{{selectText}}</text>
+            <image class='select_img {{show&&"select_img_rotate"}}' src='/images/gobottom.png'></image>   
+          </view>
+          <view class='option_box' style='height:{{show?(390):0}}rpx;'>
+            <text class='option' style='{{index==selectData.length-1&&"border:0;"}}' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}} </text>
+          </view>
+        </view>
+      </view>
+      <view class="line"></view>
       <view class="box_center">
         <view class="left">校区</view>
         <radio-group class="radio-group" bindchange="position">
@@ -41,22 +54,22 @@
           <label class = "radio">
           泰达<radio value="泰达" checked=""/>
           </label>
-      </radio-group>
+        </radio-group>
       </view>
       <view class="line"></view>
       <view class="box_center">
         <view class="left">QQ号</view>
-        <input placeholder="    请输入你的QQ号" bindinput="pQQnum"></input>
+        <input placeholder="请输入你的QQ号" bindinput="pQQnum"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
         <view class="left">手机号</view>
-        <input placeholder="    请输入你的手机号" bindinput="pCall"></input>
+        <input placeholder="请输入你的手机号" bindinput="pCall"></input>
       </view>
       <view class="line"></view>
       <view class="box_center">
         <view class="left">微信号</view>
-        <input placeholder="    请输入你的微信号" bindinput="pWechat"></input>
+        <input placeholder="请输入你的微信号" bindinput="pWechat"></input>
       </view>
       <view class="line"></view>
     </view>

@@ -10,8 +10,28 @@ Page({
     fileIDs: [], //上传云存储后的返回值
     type:'lostfound',
     isChecked: false,
+    show:false,//控制下拉列表的显示隐藏，false隐藏、true显示
+    selectData:['卡类/证照','数码产品','钱包/钱','钥匙','手袋/挎包','衣服/鞋帽','首饰/挂饰','行李/包裹','书籍/文件','其他'],//下拉列表的数据
+    index:0,//选择的下拉列表下标
+    selectText:"请选择"
   },
-
+ // 点击下拉显示框
+ selectTap(){
+  this.setData({
+   show: !this.data.show
+  });
+  },
+  // 点击下拉列表
+  optionTap(event){
+  let Index=event.currentTarget.dataset.index;//获取点击的下拉列表的下标
+  console.log("selector发生change事件，携带value值为：", this.data.selectData[Index])
+  this.setData({
+   index:Index,
+   show:!this.data.show,
+   selectText:this.data.selectData[Index],
+   kind:this.data.selectData[Index]
+  });
+  },
   /**
    * 生命周期函数--监听页面加载
    */
@@ -224,6 +244,8 @@ Page({
             pCall: this.data.pCall,
             pWechat: this.data.pWechat,
             position: this.data.position,
+            pQQnum: this.data.pQQnum,
+            kind:this.data.kind,
             name: this.data.name,
             price: this.data.price,
             info: this.data.info,
