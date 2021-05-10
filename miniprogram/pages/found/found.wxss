@@ -2,7 +2,7 @@
 
  .searchbar-result {
    margin-top:0;
-   font-size:14px
+   font-size:14px;
   }
  
  .searchbar-result .weui-cell__bd {
@@ -33,10 +33,36 @@ swiper {
   height: 100vh;
 }
 
+.my-tab {
+  display: flex;
+  color: white;
+  padding: 20rpx 0;
+  margin: 0 20rpx;
+}
+
+.my-tab-item {
+  text-align: center;
+  background-color: white;
+  color:var(--weui-FG-1);
+  font-size: 30rpx;
+}
+
+.my-tab-item:active {
+  text-align: center;
+  background-color: rgb(225, 225, 225);
+  color:var(--weui-FG-1);
+  font-size: 30rpx;
+}
+
+.weui-search-bar {
+  background-color: rgb(245, 245, 245);
+  padding-bottom: 0;
+}
+
 .tab-item {
   width: 250rpx;
   text-align: center;
-  margin: 0 36rpx;
+  margin: 36rpx;
   color: rgb(156, 156, 156);
   font-size: 30rpx;
 }
@@ -52,7 +78,6 @@ swiper {
   background-color: white;
   width: 84vw;
   margin: auto;
-  margin-top: 30rpx;
   margin-bottom: 30rpx;
 }
 
@@ -89,7 +114,16 @@ swiper {
   padding: 6rpx 10rpx;
   margin-left: 75rpx;
   border-radius: 10%;
-  background-color: #01847f;
+  background-color: #81d8cf;
+}
+
+.kind {
+  font-size: 27rpx;
+  color: white;
+  padding: 6rpx 10rpx;
+  margin-left: 20rpx;
+  border-radius: 10%;
+  background-color: #81d8cf;
 }
 
 .line {

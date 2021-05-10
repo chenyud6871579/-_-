@@ -102,12 +102,11 @@ page {
   line-height: 50rpx;
   padding: 10rpx;
   justify-content: space-between;
-  
 }
 
 .box1 text {
   margin: 0 60rpx;
-  font-size: 20rpx;
+  font-size: 30rpx;
 }
 
 .left {

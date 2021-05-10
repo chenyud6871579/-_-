@@ -1,3 +1,19 @@
+@import "../../weui.wxss";
+
+ .searchbar-result {
+   margin-top:0;
+   font-size:14px;
+  }
+ 
+ .searchbar-result .weui-cell__bd {
+   padding:2px 0 2px 20px;
+   color:var(--weui-FG-1)
+  }
+ 
+ .searchbar-result:before {
+   display:none
+  }
+
 .tab-h {
   width: 100vw;
   display: flex;
@@ -17,10 +33,36 @@ swiper {
   height: 100vh;
 }
 
+.my-tab {
+  display: flex;
+  color: white;
+  padding: 20rpx 0;
+  margin: 0 20rpx;
+}
+
+.my-tab-item {
+  text-align: center;
+  background-color: white;
+  color:var(--weui-FG-1);
+  font-size: 30rpx;
+}
+
+.my-tab-item:active {
+  text-align: center;
+  background-color: rgb(225, 225, 225);
+  color:var(--weui-FG-1);
+  font-size: 30rpx;
+}
+
+.weui-search-bar {
+  background-color: rgb(245, 245, 245);
+  padding-bottom: 0;
+}
+
 .tab-item {
   width: 250rpx;
   text-align: center;
-  margin: 0 36rpx;
+  margin: 36rpx;
   color: rgb(156, 156, 156);
   font-size: 30rpx;
 }
@@ -36,7 +78,6 @@ swiper {
   background-color: white;
   width: 84vw;
   margin: auto;
-  margin-top: 30rpx;
   margin-bottom: 30rpx;
 }
 
@@ -55,24 +96,46 @@ swiper {
 }
 
 .call {
-  width: 60rpx;
-  height: 60rpx;
+  width: 50rpx;
+  height: 50rpx;
   margin-left: 10rpx;
 }
 
 .title {
-  font-size: 40rpx;
+  font-size: 35rpx;
   color: #363636;
-  font-weight: bolder;
-  line-height: 60rpx;
+  line-height: 50rpx;
+  font-weight: bold;
+}
+
+.tag {
+  font-size: 27rpx;
+  color: white;
+  padding: 6rpx 10rpx;
+  margin-left: 75rpx;
+  border-radius: 10%;
+  background-color: #81d8cf;
+}
+
+.kind {
+  font-size: 27rpx;
+  color: white;
+  padding: 6rpx 10rpx;
+  margin-left: 20rpx;
+  border-radius: 10%;
+  background-color: #81d8cf;
+}
+
+.line {
+  margin-top: 10rpx;
 }
 
 .info {
-  margin-top: 15rpx;
+  margin-left: 75rpx;
   color: #363636;
   font-size: 33rpx;
-  width: 100%;
-  line-height: 40rpx;
+  width: 80%;
+  line-height: 50rpx;
   text-align: justify;
 }
 
@@ -92,12 +155,13 @@ swiper {
   text-align: right;
   margin-right: 10rpx;
   color: #707070;
-  font-size: 20rpx;
+  font-size: 24rpx;
 }
 
 .img_box {
   white-space: nowrap;
   margin-top: 20rpx;
+  margin-left: 75rpx;
 }
 
 .img {

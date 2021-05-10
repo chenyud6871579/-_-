@@ -55,11 +55,11 @@
     
     <block wx:if="{{fabu}}">
       <view class="box1">失物
-        <text wx:if="{{login}}">发布{{lost}}</text>
+        <text wx:if="{{login}}">发布 {{lost}}</text>
         <text wx:else>未发布</text>
       </view>
       <view class="box1">拾物
-        <text  wx:if="{{login}}">发布{{found}}</text>
+        <text  wx:if="{{login}}">发布 {{found}}</text>
         <text wx:else>未发布</text>
       </view>
     </block>

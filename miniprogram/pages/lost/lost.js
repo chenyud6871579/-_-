@@ -2,8 +2,160 @@ const db = wx.cloud.database()
 Page({
   data: {
     page: 0, //预设当前项的值
-    isSend: false
+    isSend: false,
+    inputShowed: false,
+    inputVal: "",
+    myPosition: ""
   },
+  mixins: [require('../../themeChanged')],
+  showInput: function () {
+    this.setData({
+        inputShowed: true
+    });
+},
+hideInput: function () {
+    this.setData({
+        inputVal: "",
+        inputShowed: false
+    });
+},
+clearInput: function () {
+    this.setData({
+        inputVal: ""
+    });
+},
+
+change_when_inputTyping: function() {
+  var that = this
+  const _ = db.command
+  db.collection('lost').where(_.and([_.or([
+    {
+      position: db.RegExp({
+        regexp: this.data.inputVal, //做为关键字进行匹配
+        options: 'i', //不区分大小写
+      })
+    },
+    {
+      kind: db.RegExp({
+        regexp: this.data.inputVal, //做为关键字进行匹配
+        options: 'i', //不区分大小写
+      })
+    },
+  {
+    info: db.RegExp({
+      regexp: this.data.inputVal, //做为关键字进行匹配
+      options: 'i', //不区分大小写
+    })
+  },
+  {
+    name: db.RegExp({
+      regexp: this.data.inputVal, //做为关键字进行匹配
+      options: 'i', //不区分大小写
+    })
+  }
+]),
+{
+  position: db.RegExp({
+    regexp: this.data.myPosition, //做为关键字进行匹配
+    options: 'i', //不区分大小写
+  })
+},
+]))
+    .orderBy('createTime', 'desc') //按发布时间排序
+    .get({
+      success(res) {
+        that.setData({
+          dataList_search: res.data
+        })
+      },
+      fail(res) {
+        console.log("请求失败", res)
+      }
+    })
+},
+
+inputTyping: function (e) {
+  this.setData({
+    inputVal: e.detail.value
+});
+  var that = this
+  const _ = db.command
+  db.collection('lost').where(_.and([_.or([
+    {
+      position: db.RegExp({
+        regexp: this.data.inputVal, //做为关键字进行匹配
+        options: 'i', //不区分大小写
+      })
+    },
+    {
+      kind: db.RegExp({
+        regexp: this.data.inputVal, //做为关键字进行匹配
+        options: 'i', //不区分大小写
+      })
+    },
+  {
+    info: db.RegExp({
+      regexp: this.data.inputVal, //做为关键字进行匹配
+      options: 'i', //不区分大小写
+    })
+  },
+  {
+    name: db.RegExp({
+      regexp: this.data.inputVal, //做为关键字进行匹配
+      options: 'i', //不区分大小写
+    })
+  }
+]),
+{
+  position: db.RegExp({
+    regexp: this.data.myPosition, //做为关键字进行匹配
+    options: 'i', //不区分大小写
+  })
+},
+]))
+    .orderBy('createTime', 'desc') //按发布时间排序
+    .get({
+      success(res) {
+        that.setData({
+          dataList_search: res.data
+        })
+      },
+      fail(res) {
+        console.log("请求失败", res)
+      }
+    })
+},
+
+changePosition: function(e) {
+  var p = e.currentTarget.dataset.p;
+  if (p == 1)
+  {
+    this.setData({
+      myPosition: "八里台"
+  });
+  }
+  else if (p == 2)
+  {
+    this.setData({
+      myPosition: "津南"
+  });
+  }
+  else if (p == 3)
+  {
+    this.setData({
+      myPosition: "泰达"
+  });
+  }
+  else
+  {
+    this.setData({
+      myPosition: ""
+  });
+  }
+  this.getFound();
+  this.getLost();
+  this.change_when_inputTyping();
+},
 
   onLoad: function(e) {
     var that = this
@@ -73,6 +225,23 @@ Page({
       }
     })
   },
+  qq: function(e) {
+    var temp = e.currentTarget.dataset.qq
+    wx.setClipboardData({
+      data: temp.pQQnum,
+      success(res) {
+        wx.showToast({
+          title: 'QQ号已经复制',
+        })
+      },
+      fail(res) {
+        wx.showToast({
+          icon: 'none',
+          title: '该用户没有输入QQ号',
+        })
+      }
+    })
+  },
   wechat: function(e) {
     var temp = e.currentTarget.dataset.wechat
     wx.setClipboardData({
@@ -104,6 +273,12 @@ Page({
   getLost: function() {
     var that = this
     db.collection('lost')
+      .where({
+          position: db.RegExp({
+            regexp: this.data.myPosition, //做为关键字进行匹配
+            options: 'i', //不区分大小写
+          })
+      })
       .orderBy('createTime', 'desc') //按发布时间排序
       .get({
         success(res) {
@@ -119,7 +294,13 @@ Page({
   getFound: function() {
     var that = this
     db.collection('found')
-      .orderBy('createTime', 'desc') //按发布视频排序
+    .where({
+      position: db.RegExp({
+        regexp: this.data.myPosition, //做为关键字进行匹配
+        options: 'i', //不区分大小写
+      })
+  })
+      .orderBy('createTime', 'desc') //按发布时间排序
       .get({
         success(res) {
           that.setData({
@@ -130,65 +311,5 @@ Page({
           console.log("请求失败", res)
         }
       })
-  },
-  //打开分类按钮
-  send: function() {
-    var that = this
-    wx.getStorage({
-      key: 'login',
-      success: function(res) {
-        if (res.data) {
-          that.setData({
-            isSend: true
-          })
-        } else {
-          wx.showToast({
-            icon: "none",
-            title: '你还未登录'
-            // 有问题
-          })
-        }
-      },
-      fail: function (res) {
-        wx.showToast({
-          icon: "none",
-          title: '你还未登录'
-          // 有问题
-        })
-      }
-    })
-  },
-  //退出分类按钮
-  back: function() {
-    this.setData({
-      isSend: false,
-      isCall: false
-    })
-  },
-  //跳转至发送页面
-  send_lost: function() {
-    wx.navigateTo({
-      url: '../send/send?name=lostlost',
-    })
-  },
-  send_found: function() {
-    wx.navigateTo({
-      url: '../send/send?name=lostfound',
-    })
-  },
-  // 滚动切换标签样式
-  switchTab: function(e) {
-    this.setData({
-      page: e.detail.current
-    });
-  },
-  // 点击标题切换当前页时改变样式
-  swichNav: function(e) {
-    var temp = e.target.dataset.page;
-    if (this.data.page == temp) {} else {
-      this.setData({
-        page: temp
-      })
-    }
   }
 })

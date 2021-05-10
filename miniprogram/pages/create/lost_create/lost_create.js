@@ -1,4 +1,5 @@
 var util = require('../../util/util.js');
+
 Page({
 
   /**
@@ -12,7 +13,8 @@ Page({
     show:false,//控制下拉列表的显示隐藏，false隐藏、true显示
     selectData:['卡类/证照','数码产品','钱包/钱','钥匙','手袋/挎包','衣服/鞋帽','首饰/挂饰','行李/包裹','书籍/文件','其他'],//下拉列表的数据
     index:0,//选择的下拉列表下标
-    selectText:"请选择"
+    selectText:"请选择",
+    position: '八里台'
   },
  // 点击下拉显示框
  selectTap(){
@@ -36,7 +38,7 @@ Page({
    */
   onLoad: function (options) {
     wx.setNavigationBarTitle({
-      title: '你丢了啥了'
+      title: '失物发布'
     })
     var that = this
     wx.getStorage({
@@ -182,10 +184,43 @@ Page({
                 fileIDs: that.data.fileIDs.concat(res.result.fileID)
               });
               console.log(res.result.fileID) //输出上传后图片的返回地址
-              reslove();
-              // wx.hideLoading();
-              wx.showToast({
-                title: "上传成功",
+              wx.cloud.callFunction({
+                name: 'face',
+                data: {
+                  myfileID:res.result.fileID
+                },
+                success: res => {
+                  console.log(1)
+                  console.log(res.result)
+                  console.log(1)
+                  
+                  that.setData({
+                    fileIDs: []
+                  });
+
+                  wx.hideLoading();
+                  wx.showModal({
+                    title: '提示',
+                    content: '检测到发布内容包含个人隐私，请重新填写发布内容',
+                    success (res) {
+                      if (res.confirm) {
+                        console.log('用户点击确定')
+                      } else if (res.cancel) {
+                        console.log('用户点击取消')
+                      }
+                    }
+                  })
+                },
+                fail:res => {
+                  console.log(1)
+                  console.log(res.result)
+                  console.log(1)
+
+                  reslove();
+                  wx.showToast({
+                    title: "上传成功",
+                  })
+                }
               })
             },
             fail: function(res) {

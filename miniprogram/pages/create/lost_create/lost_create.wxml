@@ -2,7 +2,7 @@
 <view class="all">
   <block>
     <view class="box">
-      <view class="box_top">我丢东西了(*￣(エ)￣)</view>
+      <view class="box_top">失物发布</view>
       <view class="line"></view>
       <view class="box_center">
         <input placeholder="物品名称（20字以内）" bindinput="name" style='font-size:17px;'></input>

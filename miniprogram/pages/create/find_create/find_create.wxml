@@ -2,7 +2,7 @@
 <view class="all">
   <block>
     <view class="box"> <!--针对全局的布局-->
-      <view class="box_top">看我捡到了个啥(′▽`〃)</view>
+      <view class="box_top">拾物发布</view>
       <view class="line"></view>
       <view class="box_center">
         <input placeholder="物品名称（20字以内）" bindinput="name" style='font-size:17px;'></input>
