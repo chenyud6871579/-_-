@@ -49,7 +49,7 @@
               </block>
             </scroll-view>
             <view class="box_bottom" wx:if="{{openid==item._openid}}">
-              <view class="delete" bindtap="delete1" data-t="{{item}}">删除</view>
+              <view class="delete" bindtap="delete" data-t="{{item}}">删除</view>
               <view class="time">{{item.sendTime}}</view>
             </view>
             <view class="time" wx:else>{{item.sendTime}}</view>
@@ -86,7 +86,7 @@
               </block>
             </scroll-view>
             <view class="box_bottom" wx:if="{{openid==item._openid}}">
-              <view class="delete" bindtap="delete1" data-t="{{item}}">删除</view>
+              <view class="delete" bindtap="delete" data-t="{{item}}">删除</view>
               <view class="time">{{item.sendTime}}</view>
             </view>
             <view class="time" wx:else>{{item.sendTime}}</view>
