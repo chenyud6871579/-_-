@@ -3,7 +3,7 @@ const cloud = require('wx-server-sdk')
 const tencentcloud = require("tencentcloud-sdk-nodejs");
 
 cloud.init(
-  {env:'tavel-line'}
+  {env:'cloud1-5gmqj72ea1aed157'}
 )
 
 var synDetectFace = function (url, callback){

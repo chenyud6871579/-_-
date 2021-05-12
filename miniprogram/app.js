@@ -6,8 +6,8 @@ App({
    */
   onLaunch: function () {
     wx.cloud.init({
-      env:'tavel-line', 
-      // env:'tavel-line', 
+      env:'cloud1-5gmqj72ea1aed157', 
+      
       traceUser: true
     })
   },

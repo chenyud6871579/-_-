@@ -21,7 +21,7 @@
     "compileHotReLoad": false,
     "useMultiFrameRuntime": true,
     "useApiHook": true,
-    "useApiHostProcess": true,
+    "useApiHostProcess": false,
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
@@ -37,8 +37,8 @@
     "packNpmRelationList": [],
     "minifyWXSS": true
   },
-  "appid": "wxf3a544db34c0f850",
-  "projectname": "拾与失",
+  "appid": "wx7df16a4147cb0a96",
+  "projectname": "%E5%A4%B1%E4%B8%8E%E5%BE%97",
   "libVersion": "2.14.1",
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
