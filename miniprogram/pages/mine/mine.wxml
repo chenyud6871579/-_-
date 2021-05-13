@@ -1,10 +1,10 @@
-  <view class="header">
+<view class="header">
 
-   <view class="info">
+  <view class="info">
     <view class="touxiang" wx:if="{{login}}">
       <open-data type="userAvatarUrl"></open-data>
     </view>
-          
+
     <image class="touxiang mine_img" src="../../images/unlogin.png" wx:else></image>
     <view class="name" wx:if="{{login}}">
       <open-data type="userNickName"></open-data>
@@ -16,34 +16,7 @@
   </view>
 </view>
 <view class="bg">
-  <!--快捷导航-->
-      <!-- <view class="navigation"> -->
-      <!-- <view class="navigation_list" style="margin-left:10rpx">
-      <image src="/images/biaobai.png" class="list_left"></image>
-      <view class="list_right">
-        <view style="font-weight: bold;">表白墙</view>
-        <text>发布{{biaobai}}</text>
-      </view>
-    </view>
-    <view class="list_shuxian"></view>
-    <view class="navigation_list">
-      <image src="/images/xianzhi.png" class="list_left"></image>
-      <view class="list_right">
-        <view style="font-weight: bold;">闲置物品</view>
-        <text>发布{{xianzhi}}</text>
-      </view>
-    </view> -->
-      <!-- <view class="list_shuxian"></view>-->
-      <!-- <view class="navigation_list">
-      <image src="/images/lost.png" class="list_left"></image>
-      <view class="list_right">
-        <view style="font-weight: bold;">失物招领</view>
-        <text wx:if="{{login}}">失{{lost}}，拾{{found}}</text>
-        <text wx:else>您当前未登入 </text>
-      </view>
-    </view> -->
-      <!-- </view> -->
-  <!-- 列表 -->
+
   <view class="liebiao">
     <button class="box" bindtap="fabu">
       <view class="left">
@@ -52,15 +25,15 @@
       </view>
       <image class="icon mine_img" src="{{fabu?down:right}}"></image>
     </button>
-    
+
     <block wx:if="{{fabu}}">
-      <view class="box1">失物
-        <text wx:if="{{login}}">发布 {{lost}}</text>
-        <text wx:else>未发布</text>
+      <view class="box1">寻物启事
+        <text wx:if="{{login}}" bindtap="mylost">{{lost}} 详细信息></text>
+        <text wx:else>未登录</text>
       </view>
-      <view class="box1">拾物
-        <text  wx:if="{{login}}">发布 {{found}}</text>
-        <text wx:else>未发布</text>
+      <view class="box1">失物招领
+        <text wx:if="{{login}}" bindtap="myfound">{{found}} 详细信息></text>
+        <text wx:else>未登录</text>
       </view>
     </block>
     <!-- <button class="box" style="border-top: {{fabu?'2rpx solid #ccc':''}};" bindtap="previewImg">
@@ -71,10 +44,10 @@
     </button> -->
     <!--客服-->
     <button open-type="contact" class="box" hover-class="none" style="border-top: {{fabu?'2rpx solid #ccc':''}};">
-        <view class="left">
+      <view class="left">
         <image src="../../images/wechat.png" class="icon mine_img"></image>
         <view style="line-height:80rpx;">联系客服</view>
-        </view>
+      </view>
     </button>
     <button class="box" style="border-top: {{fabu?'2rpx solid #ccc':''}};" bindtap="about" hover-class="none">
       <view class="left">
@@ -83,5 +56,5 @@
       </view>
     </button>
   </view>
-  
+
 </view>

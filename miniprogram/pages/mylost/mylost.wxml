@@ -1,5 +1,5 @@
 <view class="margin_tool"></view>
-<view wx:for="{{dataList1}}" wx:key='index'>
+<view wx:for="{{dataList}}" wx:key='index'>
   <view class="box">
     <view class="top">
       <view class="top">

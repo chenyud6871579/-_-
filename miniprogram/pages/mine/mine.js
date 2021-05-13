@@ -23,6 +23,16 @@ Page({
       url: './about/about',
     })
    },
+   mylost(){
+    wx.navigateTo({
+      url: '../mylost/mylost',
+    })
+   },
+   myfound(){
+    wx.navigateTo({
+      url: '../myfound/myfound',
+    })
+   },
   previewImg: function (e) {
     wx.navigateTo({
       url: '../sendContact/sendContact',

@@ -9,7 +9,8 @@
     "pages/lost/lost",
     "pages/send/send",
     "pages/found/found",
-    "pages/myfound/myfound"
+    "pages/myfound/myfound",
+    "pages/mylost/mylost"
   ],
   "tabBar": {
     "color": "#707070",

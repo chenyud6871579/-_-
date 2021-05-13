@@ -1,7 +1,7 @@
 const db = wx.cloud.database()
 Page({
   data: {
-    page: 1, //预设当前项的值
+    page: 0, //预设当前项的值
     isSend: false,
     inputShowed: false,
     inputVal: "",
@@ -28,7 +28,7 @@ clearInput: function () {
 change_when_inputTyping: function() {
   var that = this
   const _ = db.command
-  db.collection('found').where(_.and([_.or([
+  db.collection('lost').where(_.and([_.or([
     {
       position: db.RegExp({
         regexp: this.data.inputVal, //做为关键字进行匹配
@@ -65,7 +65,7 @@ change_when_inputTyping: function() {
     .get({
       success(res) {
         that.setData({
-          dataList1_search: res.data
+          dataList_search: res.data
         })
       },
       fail(res) {
@@ -80,7 +80,7 @@ inputTyping: function (e) {
 });
   var that = this
   const _ = db.command
-  db.collection('found').where(_.and([_.or([
+  db.collection('lost').where(_.and([_.or([
     {
       position: db.RegExp({
         regexp: this.data.inputVal, //做为关键字进行匹配
@@ -117,7 +117,7 @@ inputTyping: function (e) {
     .get({
       success(res) {
         that.setData({
-          dataList1_search: res.data
+          dataList_search: res.data
         })
       },
       fail(res) {
@@ -272,14 +272,18 @@ changePosition: function(e) {
 
   getLost: function() {
     var that = this
-    db.collection('lost')
+    wx.getStorage({
+      key: 'openid',
+      success: function(res) {
+        that.setData({
+          openid: res.data
+        })
+        console.log(that.data.openid)
+        db.collection('lost')
+      .orderBy('createTime', 'desc') //按发布视频排序
       .where({
-          position: db.RegExp({
-            regexp: this.data.myPosition, //做为关键字进行匹配
-            options: 'i', //不区分大小写
-          })
+        _openid: that.data.openid
       })
-      .orderBy('createTime', 'desc') //按发布时间排序
       .get({
         success(res) {
           that.setData({
@@ -290,21 +294,19 @@ changePosition: function(e) {
           console.log("请求失败", res)
         }
       })
+      },
+    })
   },
   getFound: function() {
     var that = this
-    wx.getStorage({
-      key: 'openid',
-      success: function(res) {
-        that.setData({
-          openid: res.data
-        })
-        console.log(that.data.openid)
-        db.collection('found')
-      .orderBy('createTime', 'desc') //按发布视频排序
-      .where({
-        _openid: that.data.openid
+    db.collection('found')
+    .where({
+      position: db.RegExp({
+        regexp: this.data.myPosition, //做为关键字进行匹配
+        options: 'i', //不区分大小写
       })
+  })
+      .orderBy('createTime', 'desc') //按发布时间排序
       .get({
         success(res) {
           that.setData({
@@ -315,7 +317,5 @@ changePosition: function(e) {
           console.log("请求失败", res)
         }
       })
-      },
-    })
   }
 })

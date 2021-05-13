@@ -99,14 +99,17 @@ page {
   flex-direction: row;
   text-indent: 40rpx;
   height: 60rpx;
-  line-height: 50rpx;
-  padding: 10rpx;
+  padding: 15rpx;
+  margin-top: 10rpx;
   justify-content: space-between;
+  letter-spacing: 3rpx;
+  color: #333333;
 }
 
 .box1 text {
   margin: 0 60rpx;
   font-size: 30rpx;
+  color: #707070;
 }
 
 .left {

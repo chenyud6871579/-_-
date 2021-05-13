@@ -100,7 +100,7 @@ swiper {
 
 .tag {
   font-size: 27rpx;
-  color: #f7f7f7;
+  color: white;
   padding: 6rpx 10rpx;
   margin-left: 75rpx;
   border-radius: 10%;
@@ -110,7 +110,7 @@ swiper {
 
 .kind {
   font-size: 27rpx;
-  color: #f7f7f7;
+  color: white;
   padding: 6rpx 10rpx;
   margin-left: 20rpx;
   border-radius: 10%;
