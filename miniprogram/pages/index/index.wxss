@@ -11,8 +11,8 @@ swiper{
   height: 35vh;
   /* box-shadow: 10rpx 10rpx 10rpx rgba(0, 0, 0, 0.2); */
   border-radius: 10rpx;
-
 }
+
 swiper-item{
   border-radius: 10rpx;
 }
@@ -34,7 +34,7 @@ swiper-item{
 .box{
   display: flex;
   flex-direction: row;
-  background-color: #81d8cf;
+  background-color: #7e126e;
   border-radius: 15rpx;
   margin-top: 90rpx;
   width: 70vw;
@@ -46,14 +46,13 @@ swiper-item{
 .box:active{
   display: flex;
   flex-direction: row;
-  background-color: #01847f;
+  background-color: #6d126d;
   border-radius: 15rpx;
   margin-top: 90rpx;
   width: 70vw;
   height: 15vw;
   justify-content: center;
   font-size: 30rpx;
-  /* box-shadow: 10rpx 10rpx 10rpx rgba(0, 255, 186, 0.5); */
 }
 .box image{
   width: 15vw;

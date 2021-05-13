@@ -3,7 +3,7 @@ page {
 }
 
 .info {
-  background-color: #81d8cf; 
+  background-color: #7e126e; 
   padding: 30rpx;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@ page {
   margin-top: 15rpx;
 	background-color: #fff;
 	border: none;
-	color: #81d8cf;
+	color: #7e126e;
 }
 .name{
   height: 70rpx;
@@ -129,7 +129,7 @@ page {
 .header {
   position: relative;
   height:300rpx;
-  background: linear-gradient(to bottom, #81d8cf, #81d8cf); 
+  background: linear-gradient(to bottom, #7e126e, #7e126e); 
 }
 
 .bg_ware {
@@ -149,7 +149,4 @@ button::before{
   display: none; 
   background-color: #fff; 
   border-radius: 0; 
-  
-} 
-
-
+}

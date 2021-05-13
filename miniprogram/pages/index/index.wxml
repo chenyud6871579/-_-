@@ -1,21 +1,30 @@
 <view class="all">
   <swiper autoplay="true" interval="10000">
     <swiper-item>
-      <image src="../../images/p1.jpg"></image>
+      <image src="../../images/p1.jpeg"></image>
     </swiper-item>
     <swiper-item>
-      <image src="../../images/p2.jpg"></image>
+      <image src="../../images/p2.jpeg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/p3.jpeg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/p4.jpeg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="../../images/p5.jpg"></image>
     </swiper-item>
   </swiper>
   <view class="buttons">
     <view class="line">
-      <view class="box" bindtap="lost">
+      <view class="box a" bindtap="lost">
         <!-- <image src="../../images/lost.png"></image> -->
         <view>寻 物 启 事</view>
       </view>
     </view>
     <view class="line">
-      <view class="box" bindtap="found">
+      <view class="box b" bindtap="found">
        <!-- <image src="../../images/lost.png"></image> -->
         <view>失 物 招 领</view>
       </view>

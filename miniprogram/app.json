@@ -13,7 +13,7 @@
   ],
   "tabBar": {
     "color": "#707070",
-    "selectedColor": "#81d8cf",
+    "selectedColor": "#7e126e",
     "borderStyle": "black",
     "backgroundColor": "#f7f7f7",
     "list": [
@@ -38,7 +38,7 @@
     ]
   },
   "window": {
-    "navigationBarBackgroundColor": "#81d8cf",
+    "navigationBarBackgroundColor": "#7e126e",
     "navigationBarTextStyle": "white"
   },
   "sitemapLocation": "sitemap.json"
