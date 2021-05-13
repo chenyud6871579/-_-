@@ -18,13 +18,13 @@
   </swiper>
   <view class="buttons">
     <view class="line">
-      <view class="box a" bindtap="lost">
+      <view class="box" bindtap="lost">
         <!-- <image src="../../images/lost.png"></image> -->
         <view>寻 物 启 事</view>
       </view>
     </view>
     <view class="line">
-      <view class="box b" bindtap="found">
+      <view class="box" bindtap="found">
        <!-- <image src="../../images/lost.png"></image> -->
         <view>失 物 招 领</view>
       </view>

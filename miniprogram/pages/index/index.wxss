@@ -22,7 +22,7 @@ swiper-item{
   margin-top: 3vw;
 }
 .buttons{
-  margin-top: 50rpx;
+  margin-top: 8vh;
 }
 .line{
   margin: auto;
@@ -36,7 +36,7 @@ swiper-item{
   flex-direction: row;
   background-color: #7e126e;
   border-radius: 15rpx;
-  margin-top: 90rpx;
+  margin-top: 8vh;
   width: 70vw;
   height: 15vw;
   justify-content: center;
@@ -48,7 +48,7 @@ swiper-item{
   flex-direction: row;
   background-color: #6d126d;
   border-radius: 15rpx;
-  margin-top: 90rpx;
+  margin-top: 8vh;
   width: 70vw;
   height: 15vw;
   justify-content: center;

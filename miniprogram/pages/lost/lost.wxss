@@ -115,6 +115,7 @@ swiper {
   margin-left: 75rpx;
   border-radius: 10%;
   background-color: #7e126e;
+  letter-spacing: 3rpx;
 }
 
 .kind {
@@ -124,6 +125,7 @@ swiper {
   margin-left: 20rpx;
   border-radius: 10%;
   background-color: #7e126e;
+  letter-spacing: 3rpx;
 }
 
 .line {
