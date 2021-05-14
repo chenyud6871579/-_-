@@ -1,3 +1,4 @@
+
 <view class="header">
 
   <view class="info">
@@ -15,13 +16,14 @@
     </view>
   </view>
 </view>
-<view class="bg">
 
+<view class="bg">
+  
   <view class="liebiao">
     <button class="box" bindtap="fabu">
       <view class="left">
         <image src="../../images/send.png" class="icon mine_img"></image>
-        <view style="line-height:80rpx;">我发布的</view>
+        <text class='aaa' style="line-height:80rpx;">我发布的</text>
       </view>
       <image class="icon mine_img" src="{{fabu?down:right}}"></image>
     </button>
