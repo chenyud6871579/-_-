@@ -46,13 +46,13 @@
         <view class="left">校区</view>
         <radio-group class="radio-group" bindchange="position">
           <label class = "radio">
-          八里台<radio value="八里台" checked="true"/>
+          八里台 <radio value="八里台" checked="true"/>
           </label>
           <label class = "radio">
-          津南<radio value="津南" checked=""/>
+          津南 <radio value="津南" checked=""/>
           </label>
           <label class = "radio">
-          泰达<radio value="泰达" checked=""/>
+          泰达 <radio value="泰达" checked=""/>
           </label>
         </radio-group>
       </view>
