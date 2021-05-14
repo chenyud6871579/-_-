@@ -1,12 +1,11 @@
-/* pages/create/create.wxss */
 page{
   height: 100%;
 }
 .container{
-  /* margin: 0 auto;
+  margin: 0 auto;
   padding-top: 15px;
-  width: 60%; */
-  /* background-color: ghostwhite; */
+  width: 40%; 
+  background-color: ghostwhite; 
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -16,12 +15,10 @@ page{
 
 .item1{
   position: absolute;
-  top: 180rpx;
-  left:200rpx;
+  top: 18vh;
 }
 
 .item2{
   position: absolute;
-  bottom: 180rpx;
-  left:200rpx;
+  bottom: 18vh;
 }

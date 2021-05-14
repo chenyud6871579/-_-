@@ -5,9 +5,9 @@ Page({
    * 页面的初始数据
    */
   data: {
-    img_src1: "../../images/find_something.png",
-    img_src2: "../../images/lost_something.png",
-    style: 'width: 350rpx; height: 350rpx;'
+    img_src1: "../../images/lost_something.png",
+    img_src2: "../../images/find_something.png",
+    style: 'width: 300rpx; height: 300rpx;'
   },
 
   /**
