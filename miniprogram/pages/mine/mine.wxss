@@ -1,7 +1,7 @@
 page {
-  background-color: rgba(247, 247, 247);  
+  background-color: #f7f7f7;
   background-repeat: no-repeat;
-  background-size:50%;
+  background-size: 50%;
   background-position-x: center;
   background-position-y: center;
   -moz-background-size: 100% 100%;

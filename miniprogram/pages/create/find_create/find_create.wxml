@@ -2,10 +2,10 @@
 <view class="all">
   <block>
     <view class="box"> <!--针对全局的布局-->
-      <view class="box_top">拾物发布</view>
+      <view class="box_top">失物招领</view>
       <view class="line"></view>
       <view class="box_center">
-        <input placeholder="物品名称（20字以内）" bindinput="name" style='font-size:17px;'></input>
+        <input placeholder="物品名称" bindinput="name" style='font-size:17px;'></input>
       </view>
       <view class="line"></view>
 
@@ -71,7 +71,6 @@
         <view class="left">微信号</view>
         <input placeholder="请输入你的微信号" bindinput="pWechat"></input>
       </view>
-      <view class="line"></view>
     </view>
   </block>
 </view>
