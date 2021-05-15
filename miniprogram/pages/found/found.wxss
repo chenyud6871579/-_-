@@ -1,4 +1,4 @@
-@import "../../weui.wxss";
+@import "../util/weui.wxss";
 
  .searchbar-result {
    margin-top:0;

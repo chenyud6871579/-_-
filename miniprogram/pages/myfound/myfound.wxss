@@ -1,4 +1,4 @@
-@import "../../weui.wxss";
+@import "../util/weui.wxss";
 
 .margin_tool {
   margin-top: 30rpx;

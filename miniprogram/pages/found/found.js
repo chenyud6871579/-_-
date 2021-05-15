@@ -7,7 +7,7 @@ Page({
     inputVal: "",
     myPosition: ""
   },
-  mixins: [require('../../themeChanged')],
+  mixins: [require('../util/themeChanged')],
   showInput: function () {
     this.setData({
         inputShowed: true
